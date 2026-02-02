@@ -14,6 +14,8 @@ function App() {
   
   const [selectedAgentId, setSelectedAgentId] = useState<string | null>(null);
   const [selectedTask, setSelectedTask] = useState<Task | null>(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileView, setMobileView] = useState<'kanban' | 'activity'>('kanban');
 
   if (agentsLoading || tasksLoading) {
     return (
@@ -22,9 +24,6 @@ function App() {
       </div>
     );
   }
-
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [mobileView, setMobileView] = useState<'kanban' | 'activity'>('kanban');
 
   return (
     <div className="h-screen flex flex-col bg-mc-bg">
