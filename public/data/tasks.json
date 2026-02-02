@@ -1,0 +1,47 @@
+{
+  "tasks": [
+    {
+      "id": "task-001",
+      "title": "Test the heySPRK.com homepage UX",
+      "description": "First test task for Shuri. Go to https://heysprk.com and evaluate the homepage from a first-time visitor perspective. Check: clarity of value prop, CTA visibility, mobile responsiveness, any friction points. Post findings as comments.",
+      "status": "assigned",
+      "priority": "medium",
+      "assigneeIds": ["shuri-product"],
+      "createdBy": "alan-main",
+      "createdAt": "2026-02-01T05:43:00Z",
+      "updatedAt": "2026-02-01T05:43:00Z",
+      "labels": ["ux", "heysprk"],
+      "comments": [],
+      "subscribers": ["alan-main", "shuri-product"]
+    },
+    {
+      "id": "task-002",
+      "title": "SEO audit for heySPRK.com",
+      "description": "Comprehensive SEO audit of heySPRK.com:\n\n1. Technical SEO check (meta tags, schema, robots.txt, sitemap)\n2. Core Web Vitals assessment\n3. Keyword opportunity analysis\n4. Competitor comparison (top 3)\n5. Prioritized recommendations\n\nPost findings as comments with confidence levels.",
+      "status": "inbox",
+      "priority": "high",
+      "assigneeIds": ["vision-seo"],
+      "createdBy": "alan-main",
+      "createdAt": "2026-02-02T00:10:00Z",
+      "updatedAt": "2026-02-02T00:10:00Z",
+      "labels": ["seo", "heysprk", "audit"],
+      "comments": [],
+      "subscribers": ["alan-main", "vision-seo"]
+    },
+    {
+      "id": "task-003",
+      "title": "Research competitor pricing for business acquisition market",
+      "description": "Research top 5 competitors in the business acquisition/search fund space:\n\n1. What services do they offer?\n2. What are their pricing models?\n3. How do they position themselves?\n4. What do G2/Capterra reviews say about them?\n\nProvide evidence for every claim.",
+      "status": "inbox",
+      "priority": "medium",
+      "assigneeIds": ["fury-research"],
+      "createdBy": "alan-main",
+      "createdAt": "2026-02-02T00:10:00Z",
+      "updatedAt": "2026-02-02T00:10:00Z",
+      "labels": ["research", "competitors", "sprk-capital"],
+      "comments": [],
+      "subscribers": ["alan-main", "fury-research"]
+    }
+  ],
+  "nextId": 4
+}

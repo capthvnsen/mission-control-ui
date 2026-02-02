@@ -1,0 +1,124 @@
+{
+  "agents": [
+    {
+      "id": "alan-main",
+      "name": "Alan",
+      "role": "Squad Lead",
+      "emoji": "🎯",
+      "status": "active",
+      "currentTaskId": null,
+      "sessionKey": "agent:main:main",
+      "model": "claude-sonnet-4-5",
+      "heartbeatOffset": 0,
+      "lastSeen": "2026-02-02T00:00:00Z"
+    },
+    {
+      "id": "shuri-product",
+      "name": "Shuri",
+      "role": "Product Analyst",
+      "emoji": "🔬",
+      "status": "idle",
+      "currentTaskId": null,
+      "sessionKey": "agent:product-analyst:main",
+      "model": "moonshotai/kimi-k2.5",
+      "heartbeatOffset": 2,
+      "lastSeen": "2026-02-02T00:00:00Z"
+    },
+    {
+      "id": "fury-research",
+      "name": "Fury",
+      "role": "Customer Researcher",
+      "emoji": "🔎",
+      "status": "idle",
+      "currentTaskId": null,
+      "sessionKey": "agent:customer-researcher:main",
+      "model": "moonshotai/kimi-k2.5",
+      "heartbeatOffset": 4,
+      "lastSeen": "2026-02-02T00:00:00Z"
+    },
+    {
+      "id": "vision-seo",
+      "name": "Vision",
+      "role": "SEO Analyst",
+      "emoji": "📊",
+      "status": "idle",
+      "currentTaskId": null,
+      "sessionKey": "agent:seo-analyst:main",
+      "model": "moonshotai/kimi-k2.5",
+      "heartbeatOffset": 6,
+      "lastSeen": "2026-02-02T00:00:00Z"
+    },
+    {
+      "id": "loki-content",
+      "name": "Loki",
+      "role": "Content Writer",
+      "emoji": "✍️",
+      "status": "idle",
+      "currentTaskId": null,
+      "sessionKey": "agent:content-writer:main",
+      "model": "moonshotai/kimi-k2.5",
+      "heartbeatOffset": 8,
+      "lastSeen": "2026-02-02T00:00:00Z"
+    },
+    {
+      "id": "quill-social",
+      "name": "Quill",
+      "role": "Social Media Manager",
+      "emoji": "📱",
+      "status": "idle",
+      "currentTaskId": null,
+      "sessionKey": "agent:social-media:main",
+      "model": "moonshotai/kimi-k2.5",
+      "heartbeatOffset": 10,
+      "lastSeen": "2026-02-02T00:00:00Z"
+    },
+    {
+      "id": "pepper-email",
+      "name": "Pepper",
+      "role": "Email Marketing",
+      "emoji": "📧",
+      "status": "idle",
+      "currentTaskId": null,
+      "sessionKey": "agent:email-marketing:main",
+      "model": "moonshotai/kimi-k2.5",
+      "heartbeatOffset": 12,
+      "lastSeen": "2026-02-02T00:00:00Z"
+    },
+    {
+      "id": "wanda-design",
+      "name": "Wanda",
+      "role": "Designer",
+      "emoji": "🎨",
+      "status": "idle",
+      "currentTaskId": null,
+      "sessionKey": "agent:designer:main",
+      "model": "moonshotai/kimi-k2.5",
+      "heartbeatOffset": 15,
+      "lastSeen": "2026-02-02T00:00:00Z"
+    },
+    {
+      "id": "wong-docs",
+      "name": "Wong",
+      "role": "Documentation Specialist",
+      "emoji": "📚",
+      "status": "idle",
+      "currentTaskId": null,
+      "sessionKey": "agent:documentation:main",
+      "model": "moonshotai/kimi-k2.5",
+      "heartbeatOffset": 30,
+      "lastSeen": "2026-02-02T00:00:00Z"
+    },
+    {
+      "id": "friday-dev",
+      "name": "Friday",
+      "role": "Developer",
+      "emoji": "💻",
+      "status": "idle",
+      "currentTaskId": null,
+      "sessionKey": "agent:developer:main",
+      "model": "moonshotai/kimi-k2.5",
+      "heartbeatOffset": 45,
+      "lastSeen": "2026-02-02T00:00:00Z"
+    }
+  ]
+}
