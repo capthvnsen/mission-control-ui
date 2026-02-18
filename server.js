@@ -114,6 +114,61 @@ app.patch('/api/tasks/:id/status', (req, res) => {
   res.json(task);
 });
 
+app.get('/api/content', (req, res) => {
+  const data = readJSON('content.json');
+  if (!data) {
+    return res.status(404).json({ error: 'content.json not found' });
+  }
+  res.json(data);
+});
+
+app.get('/api/calendar', (req, res) => {
+  const data = readJSON('calendar.json');
+  if (!data) {
+    return res.status(404).json({ error: 'calendar.json not found' });
+  }
+  res.json(data);
+});
+
+app.post('/api/content', (req, res) => {
+  const data = readJSON('content.json') || { items: [], nextId: 1 };
+  const newItem = {
+    id: `content-${String(data.nextId).padStart(3, '0')}`,
+    title: req.body.title || 'Untitled',
+    platform: req.body.platform || 'youtube',
+    stage: req.body.stage || 'idea',
+    idea: req.body.idea || '',
+    script: req.body.script || '',
+    thumbnailPrompt: req.body.thumbnailPrompt || '',
+    assigneeId: req.body.assigneeId || '',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+    dueDate: req.body.dueDate || null,
+  };
+  
+  data.items.push(newItem);
+  data.nextId++;
+  writeJSON('content.json', data);
+  res.json(newItem);
+});
+
+app.patch('/api/content/:id/stage', (req, res) => {
+  const data = readJSON('content.json');
+  if (!data) {
+    return res.status(404).json({ error: 'content.json not found' });
+  }
+  
+  const item = data.items.find(i => i.id === req.params.id);
+  if (!item) {
+    return res.status(404).json({ error: 'Content item not found' });
+  }
+  
+  item.stage = req.body.stage;
+  item.updatedAt = new Date().toISOString();
+  writeJSON('content.json', data);
+  res.json(item);
+});
+
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log(`Mission Control API running on http://localhost:${PORT}`);

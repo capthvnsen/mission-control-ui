@@ -1,0 +1,57 @@
+{
+  "items": [
+    {
+      "id": "content-001",
+      "title": "Why I Quit My Job",
+      "platform": "youtube",
+      "stage": "idea",
+      "idea": "Share the story of why I left traditional work to pursue entrepreneurship",
+      "createdAt": "2026-02-10T10:00:00Z",
+      "updatedAt": "2026-02-10T10:00:00Z"
+    },
+    {
+      "id": "content-002",
+      "title": "SPRK Capital Announcement",
+      "platform": "linkedin",
+      "stage": "script",
+      "idea": "Announcing the launch of SPRK Capital fund",
+      "script": "🎯 Big news! I'm excited to announce SPRK Capital...\n\nWe help successful contractors exit their businesses at premium valuations.",
+      "createdAt": "2026-02-08T14:00:00Z",
+      "updatedAt": "2026-02-12T09:00:00Z",
+      "assigneeId": "loki-content"
+    },
+    {
+      "id": "content-003",
+      "title": "How to Value Your Business",
+      "platform": "youtube",
+      "stage": "thumbnail",
+      "idea": "Deep dive on business valuation methods for contractors",
+      "script": "Full 10-minute script completed",
+      "thumbnailPrompt": "Contractor business owner looking at charts with confetti",
+      "createdAt": "2026-02-05T11:00:00Z",
+      "updatedAt": "2026-02-14T16:00:00Z",
+      "dueDate": "2026-02-20",
+      "assigneeId": "wanda-design"
+    },
+    {
+      "id": "content-004",
+      "title": "Weekly Tips Thread",
+      "platform": "twitter",
+      "stage": "filming",
+      "idea": "5 tips for contractor business owners",
+      "createdAt": "2026-02-01T08:00:00Z",
+      "updatedAt": "2026-02-15T10:00:00Z"
+    },
+    {
+      "id": "content-005",
+      "title": "Love for Leads Case Study",
+      "platform": "blog",
+      "stage": "published",
+      "idea": "How XYZ contractor got 50% more referrals",
+      "publishedUrl": "https://heysprk.com/blog/love-for-leads-case-study",
+      "createdAt": "2026-01-20T09:00:00Z",
+      "updatedAt": "2026-02-01T12:00:00Z"
+    }
+  ],
+  "nextId": 6
+}

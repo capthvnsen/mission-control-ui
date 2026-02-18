@@ -1,0 +1,49 @@
+{
+  "events": [
+    {
+      "id": "cal-001",
+      "title": "Morning Planning",
+      "description": "Review tasks for the day",
+      "startTime": "2026-02-18T06:00:00Z",
+      "type": "cron",
+      "recurring": true,
+      "recurrenceRule": "daily at 6am MST"
+    },
+    {
+      "id": "cal-002",
+      "title": "Compound Review",
+      "description": "Review learnings from the day",
+      "startTime": "2026-02-18T02:30:00Z",
+      "type": "cron",
+      "recurring": true,
+      "recurrenceRule": "daily at 10:30pm MST"
+    },
+    {
+      "id": "cal-003",
+      "title": "Weekly SEO Audit",
+      "description": "Run weekly SEO checks on managed sites",
+      "startTime": "2026-02-23T14:00:00Z",
+      "type": "cron",
+      "recurring": true,
+      "recurrenceRule": "every monday at 9am MST"
+    },
+    {
+      "id": "cal-004",
+      "title": "HeySPRK Blog Post",
+      "description": "Publish weekly blog content",
+      "startTime": "2026-02-19T15:00:00Z",
+      "type": "task",
+      "taskId": "task-003",
+      "assigneeId": "loki-content"
+    },
+    {
+      "id": "cal-005",
+      "title": "Heartbeat Check",
+      "description": "Check emails and calendar for urgent items",
+      "startTime": "2026-02-18T17:00:00Z",
+      "type": "cron",
+      "recurring": true,
+      "recurrenceRule": "every 30 minutes"
+    }
+  ]
+}

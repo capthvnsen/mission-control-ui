@@ -17,12 +17,12 @@
       "name": "Shuri",
       "role": "Product Analyst",
       "emoji": "🔬",
-      "status": "idle",
-      "currentTaskId": null,
+      "status": "blocked",
+      "currentTaskId": "task-004",
       "sessionKey": "agent:product-analyst:main",
       "model": "moonshotai/kimi-k2.5",
       "heartbeatOffset": 2,
-      "lastSeen": "2026-02-02T00:00:00Z"
+      "lastSeen": "2026-02-14T21:17:00Z"
     },
     {
       "id": "fury-research",

@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import { AgentsData, TasksData, Activity } from '../types';
+import { AgentsData, TasksData, Activity, ContentItem, CalendarEvent } from '../types';
 
 const API_BASE = '/api';
 
@@ -105,4 +105,60 @@ export async function createTask(task: Partial<TasksData['tasks'][0]>) {
   });
   if (!res.ok) throw new Error('Failed to create task');
   return res.json();
+}
+
+export function useContent() {
+  const [items, setItems] = useState<ContentItem[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  const fetchContent = useCallback(async () => {
+    try {
+      const res = await fetch(`${API_BASE}/content`);
+      if (!res.ok) throw new Error('Failed to fetch content');
+      const data = await res.json();
+      setItems(data.items);
+      setError(null);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Unknown error');
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    fetchContent();
+    const interval = setInterval(fetchContent, 5000);
+    return () => clearInterval(interval);
+  }, [fetchContent]);
+
+  return { items, loading, error, refetch: fetchContent };
+}
+
+export function useCalendar() {
+  const [events, setEvents] = useState<CalendarEvent[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  const fetchCalendar = useCallback(async () => {
+    try {
+      const res = await fetch(`${API_BASE}/calendar`);
+      if (!res.ok) throw new Error('Failed to fetch calendar');
+      const data = await res.json();
+      setEvents(data.events);
+      setError(null);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Unknown error');
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    fetchCalendar();
+    const interval = setInterval(fetchCalendar, 10000);
+    return () => clearInterval(interval);
+  }, [fetchCalendar]);
+
+  return { events, loading, error, refetch: fetchCalendar };
 }

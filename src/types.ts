@@ -3,12 +3,14 @@ export interface Agent {
   name: string;
   role: string;
   emoji: string;
-  status: 'active' | 'idle' | 'blocked';
+  status: 'active' | 'idle' | 'blocked' | 'working';
   currentTaskId: string | null;
   sessionKey: string;
   model: string;
   heartbeatOffset: number;
   lastSeen: string | null;
+  avatar?: string;
+  desk?: string;
 }
 
 export interface Comment {
@@ -44,6 +46,39 @@ export interface Activity {
   msg: string;
 }
 
+// Content Pipeline Types
+export type ContentStage = 'idea' | 'script' | 'thumbnail' | 'filming' | 'editing' | 'published';
+
+export interface ContentItem {
+  id: string;
+  title: string;
+  platform: 'youtube' | 'linkedin' | 'twitter' | 'blog' | 'instagram';
+  stage: ContentStage;
+  idea?: string;
+  script?: string;
+  thumbnailPrompt?: string;
+  thumbnailUrl?: string;
+  notes?: string;
+  assigneeId?: string;
+  createdAt: string;
+  updatedAt: string;
+  dueDate?: string;
+  publishedUrl?: string;
+}
+
+export interface CalendarEvent {
+  id: string;
+  title: string;
+  description?: string;
+  startTime: string;
+  endTime?: string;
+  type: 'cron' | 'task' | 'meeting' | 'reminder';
+  agentId?: string;
+  taskId?: string;
+  recurring?: boolean;
+  recurrenceRule?: string;
+}
+
 export interface AgentsData {
   agents: Agent[];
 }
@@ -63,4 +98,15 @@ export const STATUS_LABELS: Record<TaskStatus, string> = {
   in_progress: 'IN PROGRESS',
   review: 'REVIEW',
   done: 'DONE',
+};
+
+export const CONTENT_STAGES: ContentStage[] = ['idea', 'script', 'thumbnail', 'filming', 'editing', 'published'];
+
+export const CONTENT_STAGE_LABELS: Record<ContentStage, string> = {
+  idea: '💡 Ideas',
+  script: '✍️ Script',
+  thumbnail: '🖼️ Thumbnail',
+  filming: '🎬 Filming',
+  editing: '✂️ Editing',
+  published: '✅ Published',
 };

@@ -6,13 +6,21 @@
       "description": "First test task for Shuri. Go to https://heysprk.com and evaluate the homepage from a first-time visitor perspective. Check: clarity of value prop, CTA visibility, mobile responsiveness, any friction points. Post findings as comments.",
       "status": "assigned",
       "priority": "medium",
-      "assigneeIds": ["shuri-product"],
+      "assigneeIds": [
+        "shuri-product"
+      ],
       "createdBy": "alan-main",
       "createdAt": "2026-02-01T05:43:00Z",
       "updatedAt": "2026-02-01T05:43:00Z",
-      "labels": ["ux", "heysprk"],
+      "labels": [
+        "ux",
+        "heysprk"
+      ],
       "comments": [],
-      "subscribers": ["alan-main", "shuri-product"]
+      "subscribers": [
+        "alan-main",
+        "shuri-product"
+      ]
     },
     {
       "id": "task-002",
@@ -20,13 +28,22 @@
       "description": "Comprehensive SEO audit of heySPRK.com:\n\n1. Technical SEO check (meta tags, schema, robots.txt, sitemap)\n2. Core Web Vitals assessment\n3. Keyword opportunity analysis\n4. Competitor comparison (top 3)\n5. Prioritized recommendations\n\nPost findings as comments with confidence levels.",
       "status": "inbox",
       "priority": "high",
-      "assigneeIds": ["vision-seo"],
+      "assigneeIds": [
+        "vision-seo"
+      ],
       "createdBy": "alan-main",
       "createdAt": "2026-02-02T00:10:00Z",
       "updatedAt": "2026-02-02T00:10:00Z",
-      "labels": ["seo", "heysprk", "audit"],
+      "labels": [
+        "seo",
+        "heysprk",
+        "audit"
+      ],
       "comments": [],
-      "subscribers": ["alan-main", "vision-seo"]
+      "subscribers": [
+        "alan-main",
+        "vision-seo"
+      ]
     },
     {
       "id": "task-003",
@@ -34,14 +51,232 @@
       "description": "Research top 5 competitors in the business acquisition/search fund space:\n\n1. What services do they offer?\n2. What are their pricing models?\n3. How do they position themselves?\n4. What do G2/Capterra reviews say about them?\n\nProvide evidence for every claim.",
       "status": "inbox",
       "priority": "medium",
-      "assigneeIds": ["fury-research"],
+      "assigneeIds": [
+        "fury-research"
+      ],
       "createdBy": "alan-main",
       "createdAt": "2026-02-02T00:10:00Z",
       "updatedAt": "2026-02-02T00:10:00Z",
-      "labels": ["research", "competitors", "sprk-capital"],
+      "labels": [
+        "research",
+        "competitors",
+        "sprk-capital"
+      ],
       "comments": [],
-      "subscribers": ["alan-main", "fury-research"]
+      "subscribers": [
+        "alan-main",
+        "fury-research"
+      ]
+    },
+    {
+      "id": "task-004",
+      "title": "OpenAlan UX Testing - Full User Journey",
+      "description": "Test openalan.ai as a first-time user:\n\n1. Landing page clarity and value prop\n2. Sign-up flow (any friction?)\n3. Onboarding experience\n4. Dashboard usability\n5. Key feature testing (workspace creation, agent interaction)\n6. Mobile responsiveness\n7. Edge cases and error handling\n\nDocument every issue with screenshots/steps to reproduce.",
+      "status": "assigned",
+      "priority": "high",
+      "assigneeIds": [
+        "shuri-product"
+      ],
+      "createdBy": "alan-main",
+      "createdAt": "2026-02-02T01:25:00Z",
+      "updatedAt": "2026-02-02T01:26:31Z",
+      "labels": [
+        "product",
+        "ux",
+        "testing",
+        "openalan",
+        "launch"
+      ],
+      "comments": [],
+      "subscribers": [
+        "alan-main"
+      ]
+    },
+    {
+      "id": "task-005",
+      "title": "OpenAlan Technical SEO Audit",
+      "description": "SEO audit for openalan.ai:\n\n1. Meta tags (title, description, OG tags)\n2. Schema markup for SaaS product\n3. Core Web Vitals (speed, LCP, CLS)\n4. Sitemap and robots.txt\n5. Internal linking structure\n6. Mobile optimization\n7. Keyword targeting review\n\nPrioritize fixes by impact.",
+      "status": "assigned",
+      "priority": "high",
+      "assigneeIds": [
+        "vision-seo"
+      ],
+      "createdBy": "alan-main",
+      "createdAt": "2026-02-02T01:25:00Z",
+      "updatedAt": "2026-02-02T01:26:34Z",
+      "labels": [
+        "seo",
+        "technical-seo",
+        "openalan",
+        "launch"
+      ],
+      "comments": [],
+      "subscribers": [
+        "alan-main"
+      ]
+    },
+    {
+      "id": "task-006",
+      "title": "OpenAlan Landing Page Copy Review",
+      "description": "Review and optimize landing page copy:\n\n1. Headline - does it stop the scroll?\n2. Value proposition clarity\n3. Feature descriptions (benefits vs features)\n4. CTAs - clear and compelling?\n5. Social proof placement\n6. Scannable structure\n\nProvide specific rewrites, not just feedback.",
+      "status": "assigned",
+      "priority": "high",
+      "assigneeIds": [
+        "loki-content"
+      ],
+      "createdBy": "alan-main",
+      "createdAt": "2026-02-02T01:25:00Z",
+      "updatedAt": "2026-02-02T01:26:37Z",
+      "labels": [
+        "content",
+        "copy",
+        "openalan",
+        "launch"
+      ],
+      "comments": [],
+      "subscribers": [
+        "alan-main"
+      ]
+    },
+    {
+      "id": "task-007",
+      "title": "OpenAlan Design & Visual Consistency Review",
+      "description": "Design audit for openalan.ai:\n\n1. Visual hierarchy - what do users see first?\n2. Brand consistency (colors, fonts, spacing)\n3. Mobile UI/UX\n4. Button styling and CTAs\n5. Image quality and relevance\n6. Whitespace and readability\n\nProvide specific design improvements with pixel values.",
+      "status": "assigned",
+      "priority": "medium",
+      "assigneeIds": [
+        "wanda-design"
+      ],
+      "createdBy": "alan-main",
+      "createdAt": "2026-02-02T01:25:00Z",
+      "updatedAt": "2026-02-02T01:26:40Z",
+      "labels": [
+        "design",
+        "ui",
+        "openalan",
+        "launch"
+      ],
+      "comments": [],
+      "subscribers": [
+        "alan-main"
+      ]
+    },
+    {
+      "id": "task-008",
+      "title": "OpenAlan Code Review & Bug Hunt",
+      "description": "Technical code review:\n\n1. Check for console errors\n2. Test error handling (broken links, failed requests)\n3. Form validation\n4. Authentication edge cases\n5. Performance bottlenecks\n6. Browser compatibility (Chrome, Safari, Firefox)\n\nDocument bugs with reproduction steps.",
+      "status": "assigned",
+      "priority": "high",
+      "assigneeIds": [
+        "friday-dev"
+      ],
+      "createdBy": "alan-main",
+      "createdAt": "2026-02-02T01:25:00Z",
+      "updatedAt": "2026-02-02T01:26:44Z",
+      "labels": [
+        "code",
+        "bug",
+        "testing",
+        "openalan",
+        "launch"
+      ],
+      "comments": [],
+      "subscribers": [
+        "alan-main"
+      ]
+    },
+    {
+      "id": "task-009",
+      "title": "OpenAlan Competitor Analysis",
+      "description": "Research AI agent competitors:\n\n1. Lindy.ai, 11x.ai, Artisan, Relevance AI positioning\n2. Pricing comparison\n3. Feature gaps and opportunities\n4. Review analysis (what do users complain about?)\n5. Our differentiation points\n\nCite all sources.",
+      "status": "assigned",
+      "priority": "medium",
+      "assigneeIds": [
+        "fury-research"
+      ],
+      "createdBy": "alan-main",
+      "createdAt": "2026-02-02T01:25:00Z",
+      "updatedAt": "2026-02-02T01:26:47Z",
+      "labels": [
+        "research",
+        "competitive",
+        "openalan",
+        "launch"
+      ],
+      "comments": [],
+      "subscribers": [
+        "alan-main"
+      ]
+    },
+    {
+      "id": "task-010",
+      "title": "OpenAlan Documentation Review",
+      "description": "Audit all user-facing docs:\n\n1. Getting started guide completeness\n2. Feature documentation clarity\n3. FAQ coverage of common questions\n4. Help articles for key workflows\n5. Screenshots and examples\n6. Missing documentation gaps\n\nProvide specific additions needed.",
+      "status": "assigned",
+      "priority": "medium",
+      "assigneeIds": [
+        "wong-docs"
+      ],
+      "createdBy": "alan-main",
+      "createdAt": "2026-02-02T01:25:00Z",
+      "updatedAt": "2026-02-02T01:26:50Z",
+      "labels": [
+        "docs",
+        "documentation",
+        "openalan",
+        "launch"
+      ],
+      "comments": [],
+      "subscribers": [
+        "alan-main"
+      ]
+    },
+    {
+      "id": "task-011",
+      "title": "OpenAlan Social Media Launch Content",
+      "description": "Create LinkedIn launch content:\n\n1. Launch announcement post\n2. Feature highlight posts (3-5)\n3. Behind-the-scenes/founder story\n4. Testimonial templates\n5. Posting schedule\n\nReady-to-post format with timing suggestions.",
+      "status": "assigned",
+      "priority": "medium",
+      "assigneeIds": [
+        "quill-social"
+      ],
+      "createdBy": "alan-main",
+      "createdAt": "2026-02-02T01:25:00Z",
+      "updatedAt": "2026-02-02T01:26:54Z",
+      "labels": [
+        "social",
+        "linkedin",
+        "openalan",
+        "launch"
+      ],
+      "comments": [],
+      "subscribers": [
+        "alan-main"
+      ]
+    },
+    {
+      "id": "task-012",
+      "title": "OpenAlan Launch Email Sequence",
+      "description": "Create launch email sequence:\n\n1. Waitlist announcement email\n2. Early access invite\n3. Onboarding drip (3-5 emails)\n4. Feature education series\n5. Subject lines and timing\n\nComplete sequences ready to deploy.",
+      "status": "assigned",
+      "priority": "low",
+      "assigneeIds": [
+        "pepper-email"
+      ],
+      "createdBy": "alan-main",
+      "createdAt": "2026-02-02T01:25:00Z",
+      "updatedAt": "2026-02-02T01:26:58Z",
+      "labels": [
+        "email",
+        "drip",
+        "openalan",
+        "launch"
+      ],
+      "comments": [],
+      "subscribers": [
+        "alan-main"
+      ]
     }
   ],
-  "nextId": 4
+  "nextId": 13
 }

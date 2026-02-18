@@ -5,7 +5,12 @@ import { AgentSidebar } from './components/AgentSidebar';
 import { KanbanBoard } from './components/KanbanBoard';
 import { ActivityFeed } from './components/ActivityFeed';
 import { TaskDetail } from './components/TaskDetail';
+import { ContentPipeline } from './components/ContentPipeline';
+import { Calendar } from './components/Calendar';
+import { OfficeView } from './components/OfficeView';
 import { Task } from './types';
+
+type View = 'tasks' | 'content' | 'calendar' | 'office';
 
 function App() {
   const { agents, loading: agentsLoading } = useAgents();
@@ -15,6 +20,7 @@ function App() {
   const [selectedAgentId, setSelectedAgentId] = useState<string | null>(null);
   const [selectedTask, setSelectedTask] = useState<Task | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [currentView, setCurrentView] = useState<View>('tasks');
   const [mobileView, setMobileView] = useState<'kanban' | 'activity'>('kanban');
 
   if (agentsLoading || tasksLoading) {
@@ -27,11 +33,16 @@ function App() {
 
   return (
     <div className="h-screen flex flex-col bg-mc-bg">
-      <Header agents={agents} tasks={tasks} onMenuClick={() => setMobileMenuOpen(!mobileMenuOpen)} />
+      <Header 
+        agents={agents} 
+        tasks={tasks} 
+        currentView={currentView}
+        onViewChange={setCurrentView}
+        onMenuClick={() => setMobileMenuOpen(!mobileMenuOpen)} 
+      />
       
       <div className="flex-1 flex overflow-hidden">
-        {/* Desktop: Always visible sidebar */}
-        {/* Mobile: Overlay menu */}
+        {/* Mobile menu overlay */}
         <div className={`
           fixed inset-0 z-40 lg:hidden
           ${mobileMenuOpen ? 'block' : 'hidden'}
@@ -57,46 +68,69 @@ function App() {
           />
         </div>
         
-        {/* Mobile: Tabbed view */}
-        <div className="flex-1 flex flex-col lg:contents">
-          <div className="lg:hidden flex border-b border-mc-border">
-            <button
-              onClick={() => setMobileView('kanban')}
-              className={`flex-1 px-4 py-3 text-sm font-medium ${
-                mobileView === 'kanban'
-                  ? 'text-mc-accent border-b-2 border-mc-accent'
-                  : 'text-mc-muted'
-              }`}
-            >
-              Tasks
-            </button>
-            <button
-              onClick={() => setMobileView('activity')}
-              className={`flex-1 px-4 py-3 text-sm font-medium ${
-                mobileView === 'activity'
-                  ? 'text-mc-accent border-b-2 border-mc-accent'
-                  : 'text-mc-muted'
-              }`}
-            >
-              Activity
-            </button>
-          </div>
-          
-          <div className={`flex-1 ${mobileView === 'kanban' ? 'block' : 'hidden'} lg:block lg:flex-1`}>
-            <KanbanBoard
-              tasks={tasks}
-              agents={agents}
-              filterAgentId={selectedAgentId}
-              onTaskClick={setSelectedTask}
-            />
-          </div>
-          
-          <div className={`flex-1 ${mobileView === 'activity' ? 'block' : 'hidden'} lg:block lg:w-80`}>
-            <ActivityFeed
-              activities={activities}
-              agents={agents}
-            />
-          </div>
+        {/* Main content */}
+        <div className="flex-1 flex flex-col overflow-hidden">
+          {/* Mobile: Tabbed view */}
+          {currentView === 'tasks' && (
+            <>
+              <div className="lg:hidden flex border-b border-mc-border">
+                <button
+                  onClick={() => setMobileView('kanban')}
+                  className={`flex-1 px-4 py-3 text-sm font-medium ${
+                    mobileView === 'kanban'
+                      ? 'text-mc-accent border-b-2 border-mc-accent'
+                      : 'text-mc-muted'
+                  }`}
+                >
+                  Tasks
+                </button>
+                <button
+                  onClick={() => setMobileView('activity')}
+                  className={`flex-1 px-4 py-3 text-sm font-medium ${
+                    mobileView === 'activity'
+                      ? 'text-mc-accent border-b-2 border-mc-accent'
+                      : 'text-mc-muted'
+                  }`}
+                >
+                  Activity
+                </button>
+              </div>
+              
+              <div className={`flex-1 ${mobileView === 'kanban' ? 'block' : 'hidden'} lg:block lg:flex-1`}>
+                <KanbanBoard
+                  tasks={tasks}
+                  agents={agents}
+                  filterAgentId={selectedAgentId}
+                  onTaskClick={setSelectedTask}
+                />
+              </div>
+              
+              <div className={`flex-1 ${mobileView === 'activity' ? 'block' : 'hidden'} lg:block lg:w-80`}>
+                <ActivityFeed
+                  activities={activities}
+                  agents={agents}
+                />
+              </div>
+            </>
+          )}
+
+          {currentView === 'content' && (
+            <div className="flex-1 overflow-hidden">
+              <ContentPipeline />
+            </div>
+          )}
+
+          {currentView === 'calendar' && (
+            <div className="flex-1 overflow-hidden">
+              <Calendar />
+            </div>
+          )}
+
+          {currentView === 'office' && (
+            <div className="flex-1 overflow-hidden">
+              <OfficeView />
+            </div>
+          )}
         </div>
       </div>
 
